@@ -13,10 +13,18 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
 
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <span></span><span></span><span></span>
+    </div>
+    <h2 class="loading-text">Loading...</h2>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" data-aos="fade-down"
@@ -86,13 +94,16 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section d-flex flex-column flex-md-row ">
+  <section class="hero-section d-flex flex-column flex-md-row " style="background-color: #fff;">
     <!-- Image on Left -->
-    <div class="order-1 order-md-0 col-md-6 d-flex align-items-center justify-content-center p-3" data-aos="fade-right"
+    <div class="order-1 order-md-0 col-md-6 d-flex align-items-center justify-content-center p-2" data-aos="fade-right"
       data-aos-duration="1000">
-      <div class="card w-60 h-60 shadow">
-        <img id="image" src="./assets/images/travel_resized_413x622.jpg" class="card-img-top" alt="Hero Image"
-          style="width: 500px; height: 500px;">
+      <div class="card w-60 h-60 shadow ">
+        <img id="image" src="./assets/images/travel_resized_413x622.jpg"
+        class="card-img-top bg-white" 
+        alt="Hero Image"
+       
+        style="width: 400px; height: 400px;">
         <div class="card-img-overlay d-flex align-items-end p-4">
           <h2 class="text-white bg-dark bg-opacity-50 p-2 rounded">Maharaja Express</h2>
         </div>
@@ -101,12 +112,12 @@
 
     <!-- Content on Right -->
     <div class="hero-content order-0 order-md-1 col-md-6 d-flex flex-column justify-content-center p-5">
-      <h1 class="fw-bold" data-aos="fade-left" data-aos-duration="1000">Let us plan you a perfect <span
-          class="text-warning">India Holiday</span></h1>
+      <h1 class="fw-bold" data-aos="fade-left" data-aos-duration="1000" style="color: black;">Let us plan you a perfect <span
+          style="color: #ff9f1c;">India Holiday</span></h1>
       <p class="text-muted" data-aos="fade-left" data-aos-duration="1000">Tour My India, one of the best travel agencies
         in India, offers custom-crafted tour packages for unforgettable holiday experiences across the country.</p>
-      <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+      <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-inner" id="carouselContentEdit">
 
           <!-- First Slide -->
           <div class="carousel-item active">
@@ -176,10 +187,12 @@
         </div>
       </div>
       <div class="d-flex align-items-center mt-3" data-aos="fade-up" data-aos-duration="1000">
-        <button class="btn btn-outline-danger me-3"><i class="bi bi-telephone"></i> +91-9212777225</button>
+        
+        <button class="btn btn-outline-danger me-3"><i class="bi bi-telephone"></i> +91-1234567896</button>
         <button class="btn btn-warning text-white">Plan Your Trip</button>
       </div>
     </div>
+    
   </section>
 
   <!-- Explore Top Destinations by Region -->
@@ -369,7 +382,7 @@
       <h2 class="section-title text-center mb-5">Why Choose Us ?</h2>
       <div class="row g-4 justify-content-center">
 
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex">
           <div class="choose-card p-4 text-center rounded-3" style="background-color: #eef3ec;">
             <div class="mb-3 fs-2 text-dark">
               <i class="fa-regular fa-thumbs-up"></i>
@@ -382,7 +395,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex">
           <div class="choose-card p-4 text-center rounded-3" style="background-color: #eef5f8;">
             <div class="mb-3 fs-2 text-dark">
               <i class="fa-regular fa-thumbs-up"></i>
@@ -395,7 +408,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex">
           <div class="choose-card p-4 text-center rounded-3" style="background-color: #fff0ea;">
             <div class="mb-3 fs-2 text-dark">
               <i class="fa-regular fa-thumbs-up"></i>
@@ -408,7 +421,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 d-flex">
           <div class="choose-card p-4 text-center rounded-3" style="background-color: #fff6e8;">
             <div class="mb-3 fs-2 text-dark">
               <i class="fa-regular fa-thumbs-up"></i>
@@ -679,18 +692,18 @@
             <p><i class="fas fa-map-marker-alt"></i> C - 81C, Sector - 8, Noida - 201301</p>
           </div>
           <div class="col-md-4">
-            <p><i class="fas fa-phone"></i> +91-120-4052615 / 99</p>
+            <p><i class="fas fa-phone"></i> +91-123-456789 / 99</p>
           </div>
           <div class="col-md-4">
-            <p><i class="fas fa-envelope"></i> info@tourmyindia.com</p>
+            <p><i class="fas fa-envelope"></i> info@imperialTrails.com</p>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-4">
-            <p><i class="fas fa-mobile-alt"></i> +91-9212777225 (WhatsApp)</p>
+            <p><i class="fas fa-mobile-alt"></i> +91-1234567896 (WhatsApp)</p>
           </div>
           <div class="col-md-4">
-            <p><i class="fab fa-skype"></i> tourmyindiadelhi</p>
+            <p><i class="fab fa-skype"></i> ImperialTrails</p>
           </div>
           <div class="col-md-4 social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -701,7 +714,7 @@
         </div>
 
         <div class="footer-line"></div>
-        <p class="mt-3">Copyright ©2025, Tour My India Pvt. Ltd</p>
+        <p class="mt-3">Copyright ©2025, Imperial Trails Pvt. Ltd</p>
       </div>
     </div>
   </footer>

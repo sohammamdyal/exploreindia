@@ -11,6 +11,71 @@ body {
     overflow-x: hidden;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Loader Dots */
+.loader span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  background: #3498db;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite ease-in-out alternate;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+  background: #e74c3c;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+  background: #f1c40f;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+/* Loading Text */
+.loading-text {
+  font-family: Arial, sans-serif;
+  color: #555;
+  margin-top: 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* Main Content */
+.content {
+  padding: 60px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -69,6 +134,7 @@ a {
 .hero {
     display: flex;
     padding: 40px;
+
 }
 .hero-left {
     width: 50%;
@@ -84,7 +150,7 @@ a {
     left: 20px;
     color: white;
     font-size: 24px;
-    background: rgba(0,0,0,0.6);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 5px 10px;
     border-radius: 4px;
 }
@@ -105,6 +171,8 @@ a {
     margin-bottom: 30px;
     color: #555;
 }
+
+
 
 /* Packages */
 .packages {
@@ -179,27 +247,29 @@ footer {
 }
 
 .hero-section {
-    background: url('./../images/1.jpg') no-repeat center center/cover;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    z-index: 1;
-    overflow: hidden;
-  }
-  
-  .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 1); /* white with some transparency */
-    z-index: -1;
-  }
+  background: #ffffff; /* solid white */
+  background-image: none;    /* remove any image */
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#carouselContentEdit{
+  background-color: #ffbf69;
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+#carouselContentEdit:hover{
+  border-radius: 40px;
+ 
+  background-color: #ff9f1c;
+}
   
   #image {
     transition: opacity 1s ease-in-out;
@@ -209,7 +279,7 @@ footer {
   .hero-text-box {
     background: white;
     padding: 40px 30px;
-    border-radius: 30px 30px 60px 60px;
+    border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 350px;
   }
@@ -340,18 +410,9 @@ footer {
     color: white; /* Optional: For better text visibility */
   }
 
-  .hero-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Optional overlay for readability */
-    z-index: 0;
-  }
+  
 
-  .hero-section > * {
-    position: relative;
-    z-index: 1;
-  }
+
 
   .destination-img {
     height: 300px; 
@@ -430,7 +491,7 @@ footer {
   }
 
    /* Hero Section */
-   .hero-section {
+   /* .hero-section {
     background: url('https://i.ibb.co/W0TxqZs/wedding-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -438,7 +499,7 @@ footer {
     justify-content: space-between;
     padding: 0 5%;
     flex-wrap: wrap;
-  }
+  } */
 
   .hero-text-box {
     background: white;
@@ -566,7 +627,7 @@ footer {
   }
 
   .hero-section {
-    background: url('https://i.ibb.co/W0TxqZs/wedding-bg.jpg') no-repeat center center/cover;
+    background-color: #fff ;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -578,7 +639,7 @@ footer {
   .hero-text-box {
     background: white;
     padding: 40px 30px;
-    border-radius: 30px 30px 60px 60px;
+    border-radius: 30px 30px 30px 30px;
     max-width: 350px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
@@ -861,7 +922,7 @@ footer {
   .discover-img {
     border-radius: 10px;
     width: 100%;
-    height: auto;
+    height: 400px;
   }
 
   @media (max-width: 767px) {

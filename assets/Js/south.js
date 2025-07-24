@@ -2,9 +2,9 @@ const exploreBtn = document.getElementById("exploreBtn");
 const infoWindow = document.getElementById("infoWindow");
 const closeInfo = document.getElementById("closeInfo");
 
-exploreBtn.addEventListener("click", () => {
-    infoWindow.style.display = "block";
-});
+// exploreBtn.addEventListener("click", () => {
+//     infoWindow.style.display = "block";
+// });
 
 closeInfo.addEventListener("click", () => {
     infoWindow.style.display = "none";
@@ -152,11 +152,9 @@ const exploreData = {
   }
 
   // ----- ATTACH LISTENERS TO ALL EXPLORE BUTTONS -----
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".explore-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const cat = btn.getAttribute("data-explore");
-        openInfoWindow(cat);
-      });
+  document.querySelectorAll(".explore-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const cat = btn.getAttribute("data-explore");
+      openInfoWindow(cat);
     });
   });
