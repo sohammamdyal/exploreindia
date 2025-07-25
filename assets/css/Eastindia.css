@@ -55,7 +55,7 @@ transition: all 0.3s ease;
 background-color: #f0f0f0;
 }
 #package{
-    background-image: url("../Images/kasmirimage.webp");
+    background-image: url("./../images/EastIndiaImages/india-1309206_1280.jpg");
     background-size: cover;
     background-position: center;
     height: 80vh;
